@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <title>Exercice 1</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  </head>
+  <body ng-app>
+      <form name="myForm">
+        <input name="mail" type="email" ng-model="email" placeholder="adresse mail" required/>
+      </form>
+      <div style="color: red" ng-show="myForm.mail.$error.email">L'adresse email est incorrect !</div>
+      <div style="color: red" ng-show="myForm.mail.$error.required">Saisir une adresse mail</div>
+      <div style="color: green" ng-show="myForm.mail.$valid-key.email">Correct</div>
+  </body>
+
+</html>
+<!--
+<body ng-app>
+  <div>
+    <form name="myForm">
+      <input type="email" name="input" ng-model="email" required>
+      <div style="background-color: red" ng-show="myForm.mail.$error.email">L'adresse email est incorrect !</div>
+      <div style="background-color: red" ng-show="myForm.mail.$error.required">Saisir une adresse mail</div>
+      <div style="background-color: green" ng-show="myForm.mail.$valid-key.email">Correct</div>
+  </form>
+  </div>
+</body>
+-->
